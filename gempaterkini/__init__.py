@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 def ekstraksi_data():
     try:
-        content = requests.get('https://www.b mkg.go.id/')
+        content = requests.get('https://www.bmkg.go.id/')
     except Exception:
         return None
 
