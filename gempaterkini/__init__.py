@@ -20,21 +20,19 @@ def ekstraksi_data():
         result = result.findChildren('li')
         i = 0
         magnitudo = None
-        ls = None
-        bt = None
+        koordinat = None
         kedalaman = None
         lokasi = None
         dirasakan = None
 
         for res in result:
+            print(res)
             if i == 1:
                 magnitudo = res.text
             elif i == 2:
                 kedalaman = res.text
             elif i == 3:
-                koordinat = res.text.split(' - ')
-                ls = koordinat[0]
-                bt = koordinat[1]
+                koordinat = res.text
             elif i == 4:
                 lokasi = res.text
             elif i == 5:
@@ -47,7 +45,7 @@ def ekstraksi_data():
         hasil['waktu'] = waktu
         hasil['magnitudo'] = magnitudo
         hasil['kedalaman'] = kedalaman
-        hasil['koordinat'] = {'ls': ls, 'bt': bt}
+        hasil['koordinat'] = koordinat
         hasil['lokasi'] = lokasi
         hasil['dirasakan'] = dirasakan
         return hasil
@@ -64,6 +62,6 @@ def tampilkan_data(result):
     print(f"Waktu : {result['waktu']}")
     print(f"Magnitudo : {result['magnitudo']}")
     print(f"Kedalaman : {result['kedalaman']}")
-    print(f"Koordinat : LS = {result['koordinat']['ls']}, BT = {result['koordinat']['bt']}")
+    print(f"Koordinat : {result['koordinat']}")
     print(f"Lokasi : {result['lokasi']}")
     print(result['dirasakan'])
