@@ -3,18 +3,8 @@ from bs4 import BeautifulSoup
 
 
 def ekstraksi_data():
-    """
-    Tanggal: 21 Juni 2024,
-    Waktu: 07:11:19 WIB
-    Magnitudo: 5.7
-    Kedalaman: 78 km
-    Lokasi: 3.54 LS - 140.01 BT
-    Pusat Gempa: Pusat gempa berada di darat 68 km timur laut Yalimo
-    Dirasakan: Dirasakan (Skala MMI): II-III Wamena, II Kota Jayapura, II Kab. Jayapura
-    :return:
-    """
     try:
-        content = requests.get('https://www.bmkg.go.id/')
+        content = requests.get('https://www.b mkg.go.id/')
     except Exception:
         return None
 
