@@ -1,6 +1,5 @@
 """
-Aplikasi deteksi gempa terkini
-Modularisasi dengan Package
+Program mengambil data dari website BMKG
 """
 import gempaterkini
 
